@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
-  get 'delete', to: 'gossips#destroy'
-
+  
   resources :gossips
 
   devise_for :users

@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   before_action :sanitize_devise_params, if: :devise_controller?
 
   def sanitize_devise_params
-  	devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+  	devise_parameter_sanitizer.permit(:sign_up, keys: [:username, 
+        :email, 
+        :password, 
+        :password_confirmation, 
+        :remember_me, 
+        :sign_up_code])
   end
 end

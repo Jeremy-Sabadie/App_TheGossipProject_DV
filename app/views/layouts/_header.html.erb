@@ -6,7 +6,7 @@
         <% if user_signed_in? %>
         <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
         <li><%= link_to "Créer un gossip", new_gossip_path %></li>
-        <li><%= link_to "Mon profil", user_session_path %></li>
+        <li><%= link_to 'Page index des gossips', gossips_path %></li>
       </ul>
         <% else %>
         <li><%= link_to "Connexion", user_session_path %></li>
