@@ -1,24 +1,27 @@
-# README
+# README The Gossip Prejct Version Devise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sauf erreur de ma part, le site tourne aussi bien en local qu'en ligne sur le lien suivant: 
+https://the-gossip-project-js.herokuapp.com/.
 
-Things you may want to cover:
+Les points important:
 
-* Ruby version
+* Ce point diffère un peu de ce qui est demandé. J'ai mal interprété la consigne "1.Récap" au niveau de la preière liste à puces. Je m'explique: pour la page d'accueil, si tu n'es pas log in ou sign up, tu arrive sur un bloc qui te propose de le faire. Une fois que tu es log in, la même page d'accueil switche et d'affiche la liste de tout les gossips créés par les différents utilisateurs. 
 
-* System dependencies
+* Dans le "header" quand tu n'est pas log in: 
+   *A gauche tu as un lien vers la page d'accueil.
+   *A droite quand tu n'est pas log in, il y a un lien "connexion" qui te dirige vers la page "log in" et un lien "inscription" qui emmène vers la page "sign up". Dans cette page, il faut renseigner tous les champs et entrer dans le dernier "GOSSIP_2017" pour pouvoir valider son inscription.
 
-* Configuration
+ * Dans le "header" quand tu est log in:
+   *Le lien "déconnexion" pour le log out.
+   *"créer un gossip" pour devine quoi.
+   *Et un lien qui va vers la page d'index.
 
-* Database creation
+* Dans l'index, l'utilisateur peut supprimer ses indexs (seulement les siens).
 
-* Database initialization
+* L'utilisateur peut aussi modifier ses posts.
 
-* How to run the test suite
+* Dans l'index, les gossips s'affichent avec le nom de celui qui l'a posté, l'heure de publication et son contenu.
 
-* Services (job queues, cache servers, search engines, etc.)
+*Si il y a un problème qui m'a échapé, contacte moi sur slack ( @jerem.s )
 
-* Deployment instructions
-
-* ...
+NB: A l'heure ou j'écris ce readme, je n'ai pas commencé à écrire les tests.
