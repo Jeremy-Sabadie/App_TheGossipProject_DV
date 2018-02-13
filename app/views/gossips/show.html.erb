@@ -1,0 +1,5 @@
+<h1>Voici ton gossip</h1>
+	<p>Auteur: <%= @gossip.user.username %></p>
+	<p><%= @gossip.content %></p>
+
+	<%= link_to 'Modifier ton gossip', edit_gossip_path, class: "btn btn-lg btn-primary" %>

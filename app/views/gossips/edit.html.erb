@@ -1,0 +1,24 @@
+<h1>Balance ton ragot</h1>
+
+<%= form_for @gossip do |f| %>
+
+  <div class="form-group">
+
+
+  </div><br>
+
+  <div class="form-group">
+
+    <label>Crache ton venin ci-dessous</label>
+
+    <%= f.text_area :content, class: 'form-control' %>
+
+  </div>
+
+  <div class="form-group">
+
+    <button type="submit">Vas-y re-balanche</button>
+
+  </div>
+
+<% end %>

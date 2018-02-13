@@ -1,0 +1,15 @@
+<h1>INDEX DES GOSSIPS</h1>
+
+<ul><% @gossips.each do |gossip| %>  	
+  		<br><li><p>Créé par:<%= gossip.user.username %></p>
+        <p>Le:<%= gossip.created_at %></p>
+        <p><%= gossip.content %></p>
+		<% if current_user == gossip.user %>
+  <%= link_to "Suprimer", @gossip, method: :delete, class: "btn btn-lg btn-primary" %>
+<% end %>
+
+      
+</li>
+<% end %>
+</ul>
+   

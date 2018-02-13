@@ -1,0 +1,30 @@
+
+<div class="center jumbotron">
+  <h1>THE GOSSIP PROJECT</h1>
+  
+
+  <% if user_signed_in? %>
+    <% if Gossip.all == nil %>
+      <p>La liste des gossips est vide pour le moment!</p>
+      <%= link_to 'Index de gossips', gossips_path, class: "btn btn-lg btn-primary" %>
+    <% else %>
+  	  <ul><% Gossip.all.each do |gossip| %>    
+      <br><li><p>Créé par:<%= gossip.anonymous_author %></p>
+        <p>Le:<%= gossip.created_at %></p>
+        <p><%= gossip.content %></p><% if current_user == gossip.user %>
+  <%= link_to "Suprimer", @gossip, method: :delete, class: "btn btn-lg btn-primary"  %>
+<% end %>
+      <% end %>
+          </li>
+    <% end %>
+    </ul>
+    
+  <% else %> 
+  <p>
+    Pour poster ou voir des ragots, il faut te connecter.
+  </p> 
+    <%= link_to 'Connectez-vous', user_session_path, class: "btn btn-lg btn-primary" %><br><br>
+    <p>Si vous n'êtes pas encore enregistré, veuillez créer un compte.</p>
+    <%= link_to 'Enregistrez-vous', new_user_registration_path, class: "btn btn-lg btn-primary" %><br><br> 
+  <% end %> 
+</div>

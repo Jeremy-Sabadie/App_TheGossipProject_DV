@@ -1,0 +1,15 @@
+<h3>TON PROFIL</h3>
+
+<p>Pseudo: <%= current_user.username %></p>
+<p>Email: <%=  current_user.email%></p>
+<p><%= link_to 'Paramètres du compte', gossips_path, class: "btn btn-lg btn-primary" %></p>
+
+
+<p>Liste de tes gossips:</p>
+
+<ul><% current_user.gossips.each do |gossip| %>  	
+  		<br><li><p>Le:<%= gossip.created_at %></p>
+        <p><%= gossip.content %></p>
+        <p><%= link_to 'Supprimer', '#', class: "btn btn-lg btn-primary" %></p>
+      <% end %></li>
+    </ul>
