@@ -11,7 +11,7 @@
       <h3>Liste des gossips:</h3>
       <p>(Pour supprimer tes gossips, <%= link_to 'clique ici', gossips_path %> )</p>
   	  <ul><% Gossip.all.each do |gossip| %>    
-      <br><li><p>Créé par:<%= gossip.anonymous_author %></p>
+      <br><li><p>Créé par:<%= gossip.user.username %></p>
         <p>Le:<%= gossip.created_at %></p>
         <p><%= gossip.content %></p><% if current_user == gossip.user %>
     <% end %>
